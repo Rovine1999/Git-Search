@@ -1,27 +1,51 @@
-# GithubSearch
+### BY
+#### Rovine Sydney Wanjala, 13/11/2020
+## Description
+Application that allows the user to view and search GitHub users and repositories
+## Setup/Installation Requirements
+1. Open the browser and type ............
+click "Enter" on Windows or "Return" on Mac OSX
+2. The website should then load.
+3. To run the code locally, follow the steps below:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+1. Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+2. Run ng generate component component-name to generate a new component. You can also use ng generate directive|pipe|service|class|guard|interface|enum|module.
+3. Run ng build to build the project. The build artifacts will be stored in the dist/ directory. Use the --prod flag for a production build.
+4. Run ng test to execute the unit tests via Karma.
+5. Run ng e2e to execute the end-to-end tests via Protractor.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Known Bugs
+There are several bugs in the toppings section currently being corrected. If any other bug is discovered, please don't hesitate to contact me.
+## Technologies Used
+The project incorporates HTML, CSS, Angular and TypeScript.
+## Support and contact details
+You can find me on; 
+1. Facebook @sygel sydney. 
+2. Instangram @rovinewanjala. 
+3. Twiter @rovinewanjala. 
+4. LinkedIn @ rovinewanjala.
+5. Whatsapp +254712387089.
+### License
+*{MIT License
 
-## Code scaffolding
+Copyright (c) [2020] [Rovine Sydney Wanjala]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Build
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.}*
+Copyright (c) 2020 **Rovine Sydney Wanjala**
