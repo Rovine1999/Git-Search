@@ -20,7 +20,7 @@ There are several bugs in the toppings section currently being corrected. If any
 ## Technologies Used
 The project incorporates HTML, CSS, Angular and TypeScript.
 ## Support and contact details
-You can find me on; 
+My social handles: 
 1. Facebook @sygel sydney. 
 2. Instangram @rovinewanjala. 
 3. Twiter @rovinewanjala. 
