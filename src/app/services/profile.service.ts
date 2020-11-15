@@ -24,4 +24,8 @@ private clientsecret = '47e571b721fc454e4e4e057c3e9e09c406171fee';
     return this.http.get("https://api.github.com/users/" + this.username + "repos?client_id=" + this.clientid + "?client_secret" + this.clientsecret )
     .map( res => res.json());
   }
+
+  updateProfile(username: string){
+    this.username = username;
+  }
 }
