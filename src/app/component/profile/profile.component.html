@@ -5,6 +5,7 @@
 </form>
 <div *ngIf="profile">
    <div class="panel panel-default">
+       <img src="{{profile.avatar_url}}" alt="avatar_url">
     <div class="panel-heading">
         {{profile.name}} <small>({{profile.login}})</small>
         <span ngIf="profile.company">, Works at {{profile.company}} </span>

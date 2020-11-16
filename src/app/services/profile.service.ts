@@ -7,7 +7,8 @@ import { HttpClient} from '@angular/common/http';
 export class ProfileService {
 private username: string;
 private clientid = 'afd0ed65cc4d18a33699';
-private clientsecret = '47e571b721fc454e4e4e057c3e9e09c406171fee';
+// private clientsecret = '47e571b721fc454e4e4e057c3e9e09c406171fee';
+private clientsecret = '5e40421fe34d36fb09fa09d50d0f5a056ff4737e';
 
   constructor(private http: HttpClient) { 
     console.log("service is not ready!");
@@ -16,12 +17,12 @@ private clientsecret = '47e571b721fc454e4e4e057c3e9e09c406171fee';
 
 
   getProfileInfo() {
-    return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "?client_secret" + this.clientsecret )
+    return this.http.get("https://api.github.com/users/" + this.username + "?client_id" + this.clientid + "?client_secret" + this.clientsecret )
     
   }
 
   getProfileRepos(){
-    return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id=" + this.clientid + "?client_secret" + this.clientsecret )
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id" + this.clientid + "?client_secret" + this.clientsecret )
   }
 
   updateProfile(username: string){
