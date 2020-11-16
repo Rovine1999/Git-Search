@@ -17,14 +17,14 @@ export class ProfileComponent implements OnInit {
     console.log(profile);
     this.profile = profile;      
     });
+    
     // this.ProfileService.getProfileRepos().subscribe((repos:any[] => {
-    //   console.log(repos);
+    //   console.log();
+    //   (repos);
     //   this.repos = this.repos;
     // })
 
-    
-
-  }
+    }
   
   findProfile(){
    this.ProfileService.updateProfile(this.username);
@@ -34,7 +34,7 @@ export class ProfileComponent implements OnInit {
       this.profile = profile;
     })
 
-    this.ProfileService.getProfileRepos().subscribe(repos => {
+    this.ProfileService.getProfileRepos().subscribe((repos:any[]) => {
   console.log(repos);
   this.repos = repos;
     })

@@ -11,8 +11,8 @@ private clientid = 'afd0ed65cc4d18a33699';
 private clientsecret = '5e40421fe34d36fb09fa09d50d0f5a056ff4737e';
 
   constructor(private http: HttpClient) { 
-    console.log("service is not ready!");
-    this.username = 'Rovine1999';
+    console.log('');
+    this.username = '';
   }
 
 
