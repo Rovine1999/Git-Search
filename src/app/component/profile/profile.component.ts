@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-  profile: object;
-  repos: object;
+  profile: any[];
+  repos: any[];
   username: string;
 
   constructor(private ProfileService: ProfileService, private http:HttpClient) { 
@@ -18,21 +18,20 @@ export class ProfileComponent implements OnInit {
     this.profile = profile;      
     });
     
-    // this.ProfileService.getProfileRepos().subscribe((repos:any[] => {
-    //   console.log();
-    //   (repos);
-    //   this.repos = this.repos;
-    // })
+    this.ProfileService.getProfileRepos().subscribe((repos:any[]) => {
+      console.log(repos);
+      this.repos = repos;
+    })
 
     }
   
   findProfile(){
    this.ProfileService.updateProfile(this.username);
 
-    this.ProfileService.getProfileInfo().subscribe(profile => {
+    this.ProfileService.getProfileInfo().subscribe((profile:any[]) => {
       console.log(profile);
       this.profile = profile;
-    })
+    });
 
     this.ProfileService.getProfileRepos().subscribe((repos:any[]) => {
   console.log(repos);
