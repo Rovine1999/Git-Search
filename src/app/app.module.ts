@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { RepoComponent } from './repo/repo.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
    ProfileComponent,
-   RepoComponent 
+   RepoComponent,
+   NavbarComponent 
   ],
   
   imports: [
