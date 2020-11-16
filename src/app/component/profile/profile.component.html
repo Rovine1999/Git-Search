@@ -1,6 +1,6 @@
 <form action="" class="Search-form">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username" ~(keyup)="findProfle()">
+        <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
     </div>
 </form>
 <div *ngIf="profile">
@@ -20,7 +20,7 @@
                     <li class="list-group-items" *ngIf="profile.bio">{{profile.bio}}</li>
                     <li class="list-group-items" *ngIf="profile.hireable">available for hire</li>
                     <li class="list-group-items" *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
-                    <li class="list-group-items" *ngIf="profile.email"><a href="emailto: {{profile.email}}">{profile.email}}</a>{</li>
+                    <li class="list-group-items" *ngIf="profile.email"><a href="emailto: {{profile.email}}">{{profile.email}}</a></li>
                 </ul>
             </div>
             <div class="col-md-4">

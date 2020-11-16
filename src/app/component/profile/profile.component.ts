@@ -8,22 +8,22 @@ import { ProfileService } from '../../services/profile.service';
 })
 export class ProfileComponent implements OnInit {
   profile: any[];
-  repos: any[];
+  repos: Object;
   username: string
 
-  constructor(private profileService: ProfileService) { 
+  constructor(private ProfileService: ProfileService) { 
 
   }
   
   findProfile(){
-    this.profileService.updateProfile(this.username)
+    this.ProfileService.updateProfile(this.username)
 
-    this.profileService.getProfileInfo().subscribe(profile => {
+    this.ProfileService.getProfileInfo().subscribe(profile => {
       console.log(profile);
       
     })
 
-    this.profileService.getProfileRepos().subscribe(repos => {
+    this.ProfileService.getProfileRepos().subscribe(repos => {
   
     })
   }
