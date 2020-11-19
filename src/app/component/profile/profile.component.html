@@ -10,7 +10,7 @@
         <img src="{{profile.avatar_url}}" alt="avatar_url">
         <div class="panel-heading">
             {{profile.name}} <small>({{profile.login}})</small>
-            <span >, Works at {{profile.company}} </span>
+            <span *ngIf="company">, Works at {{profile.company}} </span>
             {{profile.location}}
         </div>
     </div>
