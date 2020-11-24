@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../../services/profile.service';
 import { HttpClient } from '@angular/common/http';
-import { Repositories } from 'src/app/repositories';
-import { Users } from 'src/app/users';
+import { Repo } from 'src/app/repositories';
+import { Profile } from 'src/app/users';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -13,11 +13,11 @@ import { FormBuilder } from '@angular/forms';
 
 export class ProfileComponent implements OnInit {
   profile: any;
-  repos: Repositories = [];
+  repos: Repo[];
   username: string;
 
 
-  newProfile: Users;
+  newProfile: Profile;
   searchForm;
 
 
@@ -36,7 +36,12 @@ export class ProfileComponent implements OnInit {
       }
     })
 
-    
+    this.ProfileService.getProfileRepos(data.username).subscribe({
+      next: value => {
+        this.repos = value;
+        console.log(value)
+      }
+    }) 
     
   }
 

@@ -24,7 +24,7 @@ username: string;
    }
 
    getProfileRepos(username): Observable<any> {
-     const url = `https://api.github.com/users/${username}/repos?client_id=${this.clientid}&client_secret=${this.clientsecret}` 
+     const url = `https://api.github.com/users/${username}/repos`;
     return this.http.get<any>(url);
    }
 
