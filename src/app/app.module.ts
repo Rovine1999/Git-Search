@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './component/profile/profile.component';
+import { ReactiveFormsModule } from '@angular/forms'
 
 
 
@@ -23,7 +24,8 @@ import { ProfileComponent } from './component/profile/profile.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]

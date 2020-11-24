@@ -1,6 +1,6 @@
-<form  (ngsubmit) = 'findProfile()'action="" class="Search-form">
+<form [formGroup]="searchForm"  (ngSubmit) = "findProfile(searchForm.value)" class="Search-form">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username"
+        <input type="text" formControlName="username" class="form-control" placeholder="Search git users with username" [(ngModel)]="username"
             name="username" >
             <button type="submit">submit</button>
     </div>
@@ -10,7 +10,7 @@
         <img src="{{profile.avatar_url}}" alt="avatar_url">
         <div class="panel-heading">
             {{profile.name}} <small>({{profile.login}})</small>
-            <span *ngIf="company">, Works at {{profile.company}} </span>
+            <span >, Works at {{profile.company}} </span>
             {{profile.location}}
         </div>
     </div>
@@ -56,6 +56,20 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 
-   
+    <!-- <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{profile.avatar_url}}" class="card-img" alt="..." height="100%">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">profile name: {{profile.login}}</h5>
+            <p class="card-text">Bio: {{profile.bio}}<br>Number if repositories: {{profile.publiic_repos}}</p>
+            <small>last updated: {{profile.updated_at}}</small>
+            <button type="button" class="btn btn-secondary" >get repositories</button>
+          </div>
+        </div>
+      </div>
+    </div> -->

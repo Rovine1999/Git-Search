@@ -3,6 +3,7 @@ import { ProfileService } from '../../services/profile.service';
 import { HttpClient } from '@angular/common/http';
 import { Repositories } from 'src/app/repositories';
 import { Users } from 'src/app/users';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -11,47 +12,42 @@ import { Users } from 'src/app/users';
 })
 
 export class ProfileComponent implements OnInit {
-  profiles: any= []
+  profile: any;
   repos: Repositories = [];
   username: string;
 
 
   newProfile: Users;
+  searchForm;
 
 
-
-  constructor(private ProfileService: ProfileService, private http:HttpClient) { 
-    // this.ProfileService.getProfileInfo(this.username).subscribe((profile :any[])=> {
-    // console.log(profile);
-    // this.profile = profile;      
-    // });
-    
-    // this.ProfileService.getProfileRepos().subscribe((repos:any[]) => {
-    //  console.log(repos);
-    //   this.repos = repos;
-    // })
-
-    }
-  
-  findProfile(){
-  //  this.ProfileService.updateProfile(this.username);
-
-    this.ProfileService.getProfileInfo(this.username).subscribe(profile => {
-     
-      this.newProfile = profile;
-      console.log(JSON.stringify(this.newProfile));
-      this.profiles.push(this.newProfile);
-    });
-
-    this.ProfileService.getProfileRepos(this.username).subscribe(repos => {
-  
-  this.repos = repos;
-  console.log(JSON.stringify(this.repos));
-
+  constructor(private ProfileService: ProfileService, private http:HttpClient, private formBuilder: FormBuilder) { 
+    this.searchForm = this.formBuilder.group({
+      username: ''
     })
+  }
+  
+  findProfile(data){
+  
+
+    this.ProfileService.getProfileInfo(data.username).subscribe({
+      next: value => {
+       this.profile = value;
+      }
+    })
+
+    
+    
   }
 
   ngOnInit(): void {
+
+    this.ProfileService.getProfileInfo('Rovine1999').subscribe({
+      next: value => {
+       this.profile = value;
+      }
+    })
+
     
     // this.ProfileService.updateProfile("Rovine1999");
     // this.ProfileService.getProfileRepos().subscribe((repos:any[]) => {
