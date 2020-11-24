@@ -8,7 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './component/profile/profile.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { HighlightDirective } from './highlight.directive'
 
 
 
@@ -17,7 +20,10 @@ import { ReactiveFormsModule } from '@angular/forms'
   declarations: [
     AppComponent,
    ProfileComponent,
-   NavbarComponent 
+   NavbarComponent,
+   AboutComponent,
+   DateAgoPipe,
+   HighlightDirective 
   ],
   
   imports: [
