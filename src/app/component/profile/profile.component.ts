@@ -53,6 +53,13 @@ export class ProfileComponent implements OnInit {
       }
     })
 
+    this.ProfileService.getProfileRepos('Rovine1999').subscribe({
+      next: value => {
+        this.repos = value;
+        console.log(value)
+      }
+    }) 
+
     
     // this.ProfileService.updateProfile("Rovine1999");
     // this.ProfileService.getProfileRepos().subscribe((repos:any[]) => {
