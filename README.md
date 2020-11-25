@@ -3,7 +3,7 @@
 ## Description
 Application that allows the user to view and search GitHub users and repositories
 ## Setup/Installation Requirements
-1. Open the browser and type ............
+1. Open the browser and type the link https://rovine1999.github.io/Git-Search/
 click "Enter" on Windows or "Return" on Mac OSX
 2. The website should then load.
 3. To run the code locally, follow the steps below:
